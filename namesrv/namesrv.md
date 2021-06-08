@@ -7,6 +7,7 @@
 
 ##### 关键类属性ScheduledExecutorService
 
+
 ```Java
 初始化方式： private final ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor(new ThreadFactoryImpl("NSScheduledThread"));
 ```
