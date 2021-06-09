@@ -34,3 +34,15 @@ netty默认配置信息类
 ```
 集群信息管理类。主要包含了topic，brokerName，clusterName，brokerAddr的元数据信息
 ```
+
+##### RemotingServer
+
+```wiki
+rpc调用处理类
+分为同步，和异步的调用，单向调用
+同步和异步调用适用于消息事务
+单向调用在无事务处理部分
+```
+
+
+
