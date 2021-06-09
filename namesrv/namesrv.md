@@ -15,8 +15,6 @@
 
 其作用定时对broker上报状态做同步状况检查，并将超过心跳同步时间的broker踢出集群
 
-
-
 ##### KVConfigManager
 
 ```java
@@ -38,11 +36,26 @@ netty默认配置信息类
 ##### RemotingServer
 
 ```wiki
-rpc调用处理类
+用于与client端进行通讯
 分为同步，和异步的调用，单向调用
 同步和异步调用适用于消息事务
 单向调用在无事务处理部分
 ```
 
+##### BrokerHousekeepingService
 
+```tex
+处理与broker的通信事件（如链接关闭，链接关闭，链接异常，链接闲置等事件时）对应的处理方式
+```
 
+##### ExecutorService remotingExecutor
+
+```tex
+注册消息处理类运行线程池
+```
+
+##### FileWatchService 
+
+```tex
+文件监听类
+```
