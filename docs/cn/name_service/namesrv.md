@@ -56,6 +56,9 @@ netty默认配置信息类
 
 ##### FileWatchService 
 
+###### 父类 [ServiceThread](../service_thread.md)
+
 ```tex
-文件监听类
+继承ServiceThread的文件监听类
 ```
+
