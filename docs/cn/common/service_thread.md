@@ -1,7 +1,7 @@
 ### ServiceThread
 #### 结构图
 
-![ServiceThread](E:\ideaworkpace\rocketmq\docs\cn\common\ServiceThread.png)
+![ServiceThread](./ServiceThread.png)
 
 #### 功能简介
 
