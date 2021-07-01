@@ -6,7 +6,7 @@
 #### 功能简介
 
 ```tex
-其本质是就对runable类的封装，实际的作用方便对线程进行唤醒/等待。
+其本质是就对runable类的封装，实际的作用方便对线程进行唤醒/等待/中断。
 ```
 #### 关键属性
 ##### CountDownLatch2
@@ -24,6 +24,7 @@
 #### 关键函数逻辑解析
 ##### waitForRunning
 ```text
-主要的同步逻辑
+主要的同步逻辑如下
+hasNotified.compareAndSet(true, false) 判断是否已经被通知过继续运行，这里采用了compareAndSet这种方式，好处是这里采用了乐观锁的方案，确保了原子性也就是判断与修改这一步是不可分的。避免了多个线程同时读到了hasNotified=true然后触发了hasNotified=false的情况。
 ```
 
